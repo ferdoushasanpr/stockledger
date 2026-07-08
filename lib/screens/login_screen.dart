@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:stockledger/screens/category_screen.dart";
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -32,7 +33,9 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       return;
     }
-    print("Login successful.");
+    Navigator.of(
+      context,
+    ).push(MaterialPageRoute(builder: (context) => const CategoryScreen()));
   }
 
   @override
