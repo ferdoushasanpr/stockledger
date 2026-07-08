@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stockledger/widgets/state_card.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key});
@@ -34,6 +35,8 @@ class CategoryScreen extends StatelessWidget {
               "Manage and organize your product classifications with precision.",
               style: TextStyle(color: Color(0xD4C5AB00)),
             ),
+            SizedBox(height: 20),
+            StateCard(),
             SizedBox(height: 20),
             TextField(
               decoration: InputDecoration(
