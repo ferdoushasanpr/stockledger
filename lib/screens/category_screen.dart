@@ -68,58 +68,55 @@ class CategoryScreen extends StatelessWidget {
             SizedBox(height: 20),
             Expanded(
               child: SingleChildScrollView(
-                child: DataTable(
-                  columns: const [
-                    DataColumn(
-                      label: Text("ID", style: TextStyle(color: Colors.white)),
-                    ),
-                    DataColumn(
-                      label: Text(
-                        "Name",
-                        style: TextStyle(color: Colors.white),
+                child: Card(
+                  color: const Color(0xFF1E1E1E), // Dark aesthetic background
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: DataTable(
+                      headingTextStyle: const TextStyle(
+                        color: Colors.amber,
+                        fontWeight: FontWeight.bold,
                       ),
-                    ),
-                    DataColumn(
-                      label: Text(
-                        "Status",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ],
-                  rows: const [
-                    DataRow(
-                      cells: [
-                        DataCell(Text("#CAT-8801")),
-                        DataCell(Text("Luxury Timepieces")),
-                        DataCell(Text("Active")),
+                      dataTextStyle: const TextStyle(color: Colors.white70),
+                      columns: const [
+                        DataColumn(label: Text("ID")),
+                        DataColumn(label: Text("Name")),
+                        DataColumn(label: Text("Status")),
+                      ],
+                      rows: const [
+                        DataRow(
+                          cells: [
+                            DataCell(Text("#CAT-8801")),
+                            DataCell(Text("Luxury Timepieces")),
+                            DataCell(Text("Active")),
+                          ],
+                        ),
+                        DataRow(
+                          cells: [
+                            DataCell(Text("#CAT-8802")),
+                            DataCell(Text("Precision Tools")),
+                            DataCell(Text("Active")),
+                          ],
+                        ),
+                        DataRow(
+                          cells: [
+                            DataCell(Text("#CAT-8803")),
+                            DataCell(Text("Archived Assets")),
+                            DataCell(Text("Inactive")),
+                          ],
+                        ),
+                        DataRow(
+                          cells: [
+                            DataCell(Text("#CAT-8804")),
+                            DataCell(Text("Computing Hardware")),
+                            DataCell(Text("Active")),
+                          ],
+                        ),
                       ],
                     ),
-                    DataRow(
-                      cells: [
-                        DataCell(Text("#CAT-8802")),
-                        DataCell(Text("Precision Tools")),
-                        DataCell(Text("Active")),
-                      ],
-                    ),
-                    DataRow(
-                      cells: [
-                        DataCell(Text("#CAT-8803")),
-                        DataCell(Text("Archived Assets")),
-                        DataCell(Text("Inactive")),
-                      ],
-                    ),
-                    DataRow(
-                      cells: [
-                        DataCell(Text("#CAT-8804")),
-                        DataCell(Text("Computing Hardware")),
-                        DataCell(Text("Active")),
-                      ],
-                    ),
-                  ],
-                  dataTextStyle: TextStyle(color: Colors.white70),
-                  headingTextStyle: TextStyle(
-                    color: Colors.amber,
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
