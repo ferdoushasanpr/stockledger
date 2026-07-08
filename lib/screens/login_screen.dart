@@ -2,7 +2,9 @@ import "package:flutter/material.dart";
 import "package:stockledger/screens/category_screen.dart";
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  const LoginScreen({super.key, required this.loginHandler});
+
+  final Function(bool) loginHandler;
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -33,9 +35,12 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       return;
     }
-    Navigator.of(
-      context,
-    ).push(MaterialPageRoute(builder: (context) => const CategoryScreen()));
+
+    widget.loginHandler(true);
+
+    // Navigator.of(
+    //   context,
+    // ).push(MaterialPageRoute(builder: (context) => const CategoryScreen()));
   }
 
   @override
