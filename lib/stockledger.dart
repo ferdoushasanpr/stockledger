@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:stockledger/screens/category_screen.dart";
+import "package:stockledger/screens/customer_screen.dart";
 import "package:stockledger/screens/login_screen.dart";
 
 class Stockledger extends StatefulWidget {
@@ -13,7 +14,7 @@ class _StockledgerState extends State<Stockledger> {
   bool _isLoggedIn = false;
   int _selectedIndex = 0;
 
-  List _screens = [CategoryScreen()];
+  final List _screens = [CategoryScreen(), CustomerScreen()];
 
   void _onTap(int value) {
     setState(() {
@@ -44,11 +45,11 @@ class _StockledgerState extends State<Stockledger> {
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(
               icon: Icon(Icons.category),
               label: "Category",
             ),
+            BottomNavigationBarItem(icon: Icon(Icons.man), label: "Customers"),
           ],
           currentIndex: _selectedIndex,
           onTap: _onTap,
