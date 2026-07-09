@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:stockledger/screens/add_screen.dart";
 
 class ProductScreen extends StatelessWidget {
   const ProductScreen({super.key});
@@ -24,7 +25,14 @@ class ProductScreen extends StatelessWidget {
             style: TextStyle(color: Colors.white70),
           ),
           ElevatedButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const AddScreen(type: FormType.product),
+                ),
+              );
+            },
             icon: Icon(Icons.add, color: Colors.black87, size: 18),
             label: Text(
               "Add Product",
