@@ -61,6 +61,10 @@ class _StockledgerState extends State<Stockledger> {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: const Color(0xFF131313),
+          selectedItemColor: const Color(0xFFE2AB00),
+          unselectedItemColor: Colors.grey,
+          type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(
