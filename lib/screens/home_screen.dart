@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:stockledger/screens/add_screen.dart";
 import "package:stockledger/widgets/report_cart.dart";
 
 class HomeScreen extends StatelessWidget {
@@ -13,7 +14,12 @@ class HomeScreen extends StatelessWidget {
         children: [
           ElevatedButton(
             onPressed: () {
-              // Handle button press
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const AddScreen(type: FormType.sale),
+                ),
+              );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFFE2AB00),
