@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:stockledger/constants/app_colors.dart";
 import "package:stockledger/screens/add_screen.dart";
 import "package:stockledger/widgets/report_cart.dart";
 
@@ -22,7 +23,7 @@ class HomeScreen extends StatelessWidget {
               );
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFFE2AB00),
+              backgroundColor: AppColors.primary,
               padding: const EdgeInsets.symmetric(vertical: 16.0),
             ),
             child: const Text(
@@ -40,7 +41,7 @@ class HomeScreen extends StatelessWidget {
               // Handle button press
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFFE2AB00),
+              backgroundColor: AppColors.primary,
               padding: const EdgeInsets.symmetric(vertical: 16.0),
             ),
             child: const Text(

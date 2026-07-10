@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:stockledger/constants/app_colors.dart";
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key, required this.loginHandler});
@@ -52,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0x13131300),
+      backgroundColor: AppColors.background,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Center(
@@ -64,24 +65,21 @@ class _LoginScreenState extends State<LoginScreen> {
                 Text(
                   "StockLedger",
                   style: TextStyle(
-                    color: Color(0xFFFFBF00),
+                    color: AppColors.primary,
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
                   "Inventory and Sales Management Systems",
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 212, 197, 171),
-                    fontSize: 16,
-                  ),
+                  style: TextStyle(color: AppColors.secondary, fontSize: 16),
                 ),
                 SizedBox(height: 20),
                 TextFormField(
                   decoration: InputDecoration(
                     hintText: "Username",
                     filled: true,
-                    fillColor: Color(0xFF1E1E1E),
+                    fillColor: AppColors.background,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
                       borderSide: BorderSide.none,
@@ -107,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: InputDecoration(
                     hintText: "Password",
                     filled: true,
-                    fillColor: Color(0xFF1E1E1E),
+                    fillColor: AppColors.background,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
                       borderSide: BorderSide.none,
@@ -131,7 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ElevatedButton(
                   onPressed: _loginHandler,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFFFBF00),
+                    backgroundColor: AppColors.primary,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(
                         2,
@@ -141,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Text(
                     "LOGIN",
                     style: TextStyle(
-                      color: Color(0xFF1E1E1E),
+                      color: AppColors.background,
                       fontSize: 16,
                       fontWeight: FontWeight.normal,
                     ),

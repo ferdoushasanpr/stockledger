@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:stockledger/constants/app_colors.dart";
 import "package:stockledger/screens/add_screen.dart";
 
 class ProductScreen extends StatelessWidget {
@@ -39,7 +40,7 @@ class ProductScreen extends StatelessWidget {
               style: TextStyle(color: Colors.black87, fontSize: 18),
             ),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFFE2AB00),
+              backgroundColor: AppColors.primary,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4),
               ),
@@ -55,9 +56,11 @@ class ProductScreen extends StatelessWidget {
                     width: 270,
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF1A1A1A),
+                      color: AppColors.background,
                       borderRadius: BorderRadius.circular(4),
-                      border: Border.all(color: Colors.white.withOpacity(.12)),
+                      border: Border.all(
+                        color: Colors.white.withValues(alpha: .12),
+                      ),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,7 +82,7 @@ class ProductScreen extends StatelessWidget {
                         const Text(
                           "#SL-44102",
                           style: TextStyle(
-                            color: Color(0xFFE0A800),
+                            color: AppColors.primary,
                             fontSize: 12,
                             fontWeight: FontWeight.w600,
                             letterSpacing: 0.6,
@@ -101,7 +104,7 @@ class ProductScreen extends StatelessWidget {
                         const SizedBox(height: 18),
 
                         Divider(
-                          color: Colors.white.withOpacity(.12),
+                          color: Colors.white.withValues(alpha: .12),
                           thickness: 1,
                           height: 1,
                         ),
@@ -114,14 +117,14 @@ class ProductScreen extends StatelessWidget {
                               child: _InfoSection(
                                 label: "UNIT PRICE",
                                 value: "\$349.00",
-                                valueColor: Color(0xFFF2C15B),
+                                valueColor: AppColors.primary,
                               ),
                             ),
                             Expanded(
                               child: _InfoSection(
                                 label: "IN STOCK",
                                 value: "42 Units",
-                                valueColor: Colors.white,
+                                valueColor: AppColors.secondary,
                               ),
                             ),
                           ],
@@ -134,9 +137,11 @@ class ProductScreen extends StatelessWidget {
                     width: 270,
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF1A1A1A),
+                      color: AppColors.background,
                       borderRadius: BorderRadius.circular(4),
-                      border: Border.all(color: Colors.white.withOpacity(.12)),
+                      border: Border.all(
+                        color: Colors.white.withValues(alpha: .12),
+                      ),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -158,7 +163,7 @@ class ProductScreen extends StatelessWidget {
                         const Text(
                           "#SL-44102",
                           style: TextStyle(
-                            color: Color(0xFFE0A800),
+                            color: AppColors.primary,
                             fontSize: 12,
                             fontWeight: FontWeight.w600,
                             letterSpacing: 0.6,
@@ -180,7 +185,7 @@ class ProductScreen extends StatelessWidget {
                         const SizedBox(height: 18),
 
                         Divider(
-                          color: Colors.white.withOpacity(.12),
+                          color: Colors.white.withValues(alpha: .12),
                           thickness: 1,
                           height: 1,
                         ),
@@ -193,14 +198,14 @@ class ProductScreen extends StatelessWidget {
                               child: _InfoSection(
                                 label: "UNIT PRICE",
                                 value: "\$349.00",
-                                valueColor: Color(0xFFF2C15B),
+                                valueColor: AppColors.primary,
                               ),
                             ),
                             Expanded(
                               child: _InfoSection(
                                 label: "IN STOCK",
                                 value: "42 Units",
-                                valueColor: Colors.white,
+                                valueColor: AppColors.secondary,
                               ),
                             ),
                           ],
@@ -237,7 +242,7 @@ class _InfoSection extends StatelessWidget {
         Text(
           label,
           style: TextStyle(
-            color: Colors.white.withOpacity(.55),
+            color: Colors.white.withValues(alpha: .55),
             fontSize: 11,
             fontWeight: FontWeight.w600,
             letterSpacing: 1,

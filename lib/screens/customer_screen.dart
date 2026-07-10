@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:stockledger/constants/app_colors.dart";
 import "package:stockledger/screens/add_screen.dart";
 
 class CustomerScreen extends StatelessWidget {
@@ -39,7 +40,7 @@ class CustomerScreen extends StatelessWidget {
               style: TextStyle(color: Colors.black87, fontSize: 18),
             ),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFFE2AB00),
+              backgroundColor: AppColors.primary,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4),
               ),
@@ -48,7 +49,7 @@ class CustomerScreen extends StatelessWidget {
           SizedBox(height: 10),
           Container(
             decoration: BoxDecoration(
-              border: Border.all(color: Color(0xFFFFC107), width: 2),
+              border: Border.all(color: AppColors.primary, width: 2),
               borderRadius: BorderRadius.circular(4),
             ),
             padding: EdgeInsets.all(8),
@@ -60,7 +61,7 @@ class CustomerScreen extends StatelessWidget {
                   children: [
                     const CircleAvatar(
                       radius: 18,
-                      backgroundColor: Color(0xFFFFC107),
+                      backgroundColor: AppColors.primary,
                       child: Text(
                         "JD",
                         style: TextStyle(
@@ -86,7 +87,7 @@ class CustomerScreen extends StatelessWidget {
                           Text(
                             "New York, USA",
                             style: TextStyle(
-                              color: Color(0xFFBDBDBD),
+                              color: AppColors.secondary,
                               fontSize: 14,
                             ),
                           ),
@@ -102,9 +103,9 @@ class CustomerScreen extends StatelessWidget {
                     vertical: 8,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF4C4336),
+                    color: AppColors.card,
                     borderRadius: BorderRadius.circular(3),
-                    border: Border.all(color: const Color(0xFF6B604F)),
+                    border: Border.all(color: AppColors.secondary),
                   ),
                   child: const Text(
                     "+1 (555) 012-3456",
@@ -118,7 +119,7 @@ class CustomerScreen extends StatelessWidget {
                 const SizedBox(height: 10),
                 const Text(
                   "j.doe@architect-corp.com",
-                  style: TextStyle(color: Color(0xFFD0D0D0), fontSize: 14),
+                  style: TextStyle(color: AppColors.secondary, fontSize: 14),
                 ),
                 const SizedBox(height: 10),
                 Row(
@@ -130,7 +131,7 @@ class CustomerScreen extends StatelessWidget {
                       splashRadius: 18,
                       icon: const Icon(
                         Icons.edit_outlined,
-                        color: Color(0xFFD7C3A1),
+                        color: AppColors.secondary,
                         size: 20,
                       ),
                     ),
@@ -140,7 +141,7 @@ class CustomerScreen extends StatelessWidget {
                       splashRadius: 18,
                       icon: const Icon(
                         Icons.delete_outline,
-                        color: Color(0xFFD7C3A1),
+                        color: AppColors.secondary,
                         size: 20,
                       ),
                     ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stockledger/constants/app_colors.dart';
 import 'package:stockledger/models/sale_item.dart';
 import 'package:stockledger/screens/sale_memo_screen.dart';
 
@@ -82,17 +83,17 @@ class _AddScreenState extends State<AddScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF131313),
+      backgroundColor: AppColors.background,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF131313),
+        backgroundColor: AppColors.background,
         title: Text(
           title,
           style: const TextStyle(
-            color: Color(0xFFE2AB00),
+            color: AppColors.primary,
             fontWeight: FontWeight.bold,
           ),
         ),
-        iconTheme: const IconThemeData(color: Color(0xFFE2AB00)),
+        iconTheme: const IconThemeData(color: AppColors.primary),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
@@ -212,7 +213,7 @@ class _AddScreenState extends State<AddScreen> {
 
                 ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFE2AB00),
+                    backgroundColor: AppColors.primary,
                     foregroundColor: Colors.black,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 20,
@@ -238,7 +239,7 @@ class _AddScreenState extends State<AddScreen> {
                     final item = _saleItems[index];
 
                     return Card(
-                      color: const Color(0xFF1E1E1E),
+                      color: AppColors.card,
                       margin: const EdgeInsets.only(bottom: 15),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -249,7 +250,7 @@ class _AddScreenState extends State<AddScreen> {
                           children: [
                             DropdownButtonFormField<int>(
                               value: item.productId,
-                              dropdownColor: const Color(0xFF1E1E1E),
+                              dropdownColor: AppColors.card,
                               decoration: decoration("Product"),
                               style: const TextStyle(color: Colors.white),
                               items: products.map((product) {
@@ -299,7 +300,7 @@ class _AddScreenState extends State<AddScreen> {
                                 Text(
                                   "৳ ${item.price}",
                                   style: const TextStyle(
-                                    color: Color(0xFFE2AB00),
+                                    color: AppColors.primary,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -318,7 +319,7 @@ class _AddScreenState extends State<AddScreen> {
                                 Text(
                                   "৳ ${item.total}",
                                   style: const TextStyle(
-                                    color: Color(0xFFE2AB00),
+                                    color: AppColors.primary,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
                                   ),
@@ -356,7 +357,7 @@ class _AddScreenState extends State<AddScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFE2AB00),
+                    backgroundColor: AppColors.primary,
                     foregroundColor: Colors.black,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                   ),

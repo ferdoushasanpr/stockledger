@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stockledger/constants/app_colors.dart';
 
 class SaleItemView {
   const SaleItemView({
@@ -35,15 +36,15 @@ class SaleMemoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF131313),
+      backgroundColor: AppColors.background,
 
       appBar: AppBar(
-        backgroundColor: const Color(0xFF131313),
-        iconTheme: const IconThemeData(color: Color(0xFFE2AB00)),
+        backgroundColor: AppColors.background,
+        iconTheme: const IconThemeData(color: AppColors.primary),
         title: const Text(
           "Sales Memo",
           style: TextStyle(
-            color: Color(0xFFE2AB00),
+            color: AppColors.primary,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -69,7 +70,7 @@ class SaleMemoScreen extends StatelessWidget {
                   child: Text(
                     "SALES MEMO",
                     style: TextStyle(
-                      color: Color(0xFFE2AB00),
+                      color: AppColors.primary,
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -97,7 +98,7 @@ class SaleMemoScreen extends StatelessWidget {
                       child: Text(
                         "Product",
                         style: TextStyle(
-                          color: Color(0xFFE2AB00),
+                          color: AppColors.primary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -107,7 +108,7 @@ class SaleMemoScreen extends StatelessWidget {
                         "Qty",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Color(0xFFE2AB00),
+                          color: AppColors.primary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -118,7 +119,7 @@ class SaleMemoScreen extends StatelessWidget {
                         "Subtotal",
                         textAlign: TextAlign.end,
                         style: TextStyle(
-                          color: Color(0xFFE2AB00),
+                          color: AppColors.primary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -171,7 +172,7 @@ class SaleMemoScreen extends StatelessWidget {
                       child: Text(
                         "Grand Total",
                         style: TextStyle(
-                          color: Color(0xFFE2AB00),
+                          color: AppColors.primary,
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
                         ),
@@ -181,7 +182,7 @@ class SaleMemoScreen extends StatelessWidget {
                     Text(
                       "৳$grandTotal",
                       style: const TextStyle(
-                        color: Color(0xFFE2AB00),
+                        color: AppColors.primary,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
@@ -196,7 +197,7 @@ class SaleMemoScreen extends StatelessWidget {
 
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFE2AB00),
+                      backgroundColor: AppColors.primary,
                       foregroundColor: Colors.black,
                       padding: const EdgeInsets.symmetric(vertical: 16),
                     ),

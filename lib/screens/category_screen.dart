@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stockledger/constants/app_colors.dart';
 import 'package:stockledger/widgets/state_card.dart';
 
 class CategoryScreen extends StatelessWidget {
@@ -21,7 +22,7 @@ class CategoryScreen extends StatelessWidget {
           ),
           Text(
             "Manage and organize your product classifications with precision.",
-            style: TextStyle(color: Color(0xD4C5AB00)),
+            style: TextStyle(color: AppColors.primary),
           ),
           SizedBox(height: 20),
           StateCard(),
@@ -47,7 +48,7 @@ class CategoryScreen extends StatelessWidget {
               style: TextStyle(color: Colors.black87, fontSize: 18),
             ),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFFE2AB00),
+              backgroundColor: AppColors.primary,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4),
               ),
@@ -57,7 +58,7 @@ class CategoryScreen extends StatelessWidget {
           Expanded(
             child: SingleChildScrollView(
               child: Card(
-                color: const Color(0xFF1E1E1E), // Dark aesthetic background
+                color: AppColors.card, // Dark aesthetic background
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
