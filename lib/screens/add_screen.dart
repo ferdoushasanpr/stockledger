@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stockledger/models/sale_item.dart';
+import 'package:stockledger/screens/sale_memo_screen.dart';
 
 enum FormType { product, customer, sale }
 
@@ -364,6 +365,35 @@ class _AddScreenState extends State<AddScreen> {
                       // TODO:
                       // Save Product or Customer
                     }
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => SaleMemoScreen(
+                          saleId: 15,
+                          invoiceNo: "INV-000015",
+                          customerName: "John Doe",
+                          saleDate: DateTime.now(),
+                          items: const [
+                            SaleItemView(
+                              productName: "Laptop",
+                              quantity: 2,
+                              price: 800,
+                            ),
+                            SaleItemView(
+                              productName: "Mouse",
+                              quantity: 3,
+                              price: 20,
+                            ),
+                            SaleItemView(
+                              productName: "Keyboard",
+                              quantity: 1,
+                              price: 40,
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
                   },
                   child: Text(title),
                 ),
