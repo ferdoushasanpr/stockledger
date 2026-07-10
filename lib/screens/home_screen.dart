@@ -11,6 +11,42 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          ElevatedButton(
+            onPressed: () {
+              // Handle button press
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFE2AB00),
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
+            ),
+            child: const Text(
+              "Add New Transaction",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          SizedBox(height: 24),
+          ElevatedButton(
+            onPressed: () {
+              // Handle button press
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFE2AB00),
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
+            ),
+            child: const Text(
+              "Transaction History",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          SizedBox(height: 24),
           ReportCart(
             title: "TOTAL SALES",
             value: "\$124,592.00",
